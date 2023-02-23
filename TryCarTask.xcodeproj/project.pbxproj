@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9EE8FC9B1FA926C11765F74 /* Pods_TryCarTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD887CB5CAF809AEB9863E53 /* Pods_TryCarTask.framework */; };
 		F6857435297B6D930021D140 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = F6857434297B6D930021D140 /* SwiftyJSON */; };
 		F6857439297B6FC70021D140 /* FavListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6857438297B6FC70021D140 /* FavListViewModel.swift */; };
 		F685743D297B702C0021D140 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685743C297B702C0021D140 /* ConnectionManager.swift */; };
@@ -19,6 +20,8 @@
 		F6857464297BB12E0021D140 /* PostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6857463297BB12E0021D140 /* PostCardView.swift */; };
 		F6857466297BC56F0021D140 /* PostDetailsCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6857465297BC56F0021D140 /* PostDetailsCV.swift */; };
 		F6857468297BC59D0021D140 /* PostDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6857467297BC59D0021D140 /* PostDetailsViewModel.swift */; };
+		F6A4F47029A666720038300D /* MyCalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4F46F29A666720038300D /* MyCalendarController.swift */; };
+		F6A4F47229A666F80038300D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4F47129A666F80038300D /* Extensions.swift */; };
 		F6AB95FF297B3D4A00B7D49B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AB95FE297B3D4A00B7D49B /* AppDelegate.swift */; };
 		F6AB9601297B3D4A00B7D49B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AB9600297B3D4A00B7D49B /* SceneDelegate.swift */; };
 		F6AB9609297B3D4A00B7D49B /* TryCarTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F6AB9607297B3D4A00B7D49B /* TryCarTask.xcdatamodeld */; };
@@ -31,6 +34,7 @@
 		F6AB9636297B45C400B7D49B /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AB9634297B45C400B7D49B /* Comment.swift */; };
 		F6AB9637297B45C400B7D49B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AB9635297B45C400B7D49B /* Post.swift */; };
 		F6AB963C297B496300B7D49B /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AB963B297B496300B7D49B /* WebService.swift */; };
+		F6C8C1A429A60F8700A29B03 /* CalenderCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8C1A329A60F8700A29B03 /* CalenderCV.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2131DFCFD7EE01FB5CF2B7E9 /* Pods-TryCarTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TryCarTask.release.xcconfig"; path = "Target Support Files/Pods-TryCarTask/Pods-TryCarTask.release.xcconfig"; sourceTree = "<group>"; };
+		AD887CB5CAF809AEB9863E53 /* Pods_TryCarTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TryCarTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E87C2EA55A5674B03F70D360 /* Pods-TryCarTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TryCarTask.debug.xcconfig"; path = "Target Support Files/Pods-TryCarTask/Pods-TryCarTask.debug.xcconfig"; sourceTree = "<group>"; };
 		F6857438297B6FC70021D140 /* FavListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavListViewModel.swift; sourceTree = "<group>"; };
 		F685743C297B702C0021D140 /* ConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		F6857443297B74220021D140 /* PostsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListViewModel.swift; sourceTree = "<group>"; };
@@ -61,6 +68,8 @@
 		F6857463297BB12E0021D140 /* PostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardView.swift; sourceTree = "<group>"; };
 		F6857465297BC56F0021D140 /* PostDetailsCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsCV.swift; sourceTree = "<group>"; };
 		F6857467297BC59D0021D140 /* PostDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewModel.swift; sourceTree = "<group>"; };
+		F6A4F46F29A666720038300D /* MyCalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCalendarController.swift; sourceTree = "<group>"; };
+		F6A4F47129A666F80038300D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F6AB95FB297B3D4A00B7D49B /* TryCarTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TryCarTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6AB95FE297B3D4A00B7D49B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6AB9600297B3D4A00B7D49B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +86,7 @@
 		F6AB9634297B45C400B7D49B /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		F6AB9635297B45C400B7D49B /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F6AB963B297B496300B7D49B /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		F6C8C1A329A60F8700A29B03 /* CalenderCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderCV.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +96,7 @@
 			files = (
 				F6857435297B6D930021D140 /* SwiftyJSON in Frameworks */,
 				F6857440297B70930021D140 /* Reachability in Frameworks */,
+				A9EE8FC9B1FA926C11765F74 /* Pods_TryCarTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +117,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8AEC478D6FCB367B6640B53F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E87C2EA55A5674B03F70D360 /* Pods-TryCarTask.debug.xcconfig */,
+				2131DFCFD7EE01FB5CF2B7E9 /* Pods-TryCarTask.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C50D9B2FF6171C58605DB386 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD887CB5CAF809AEB9863E53 /* Pods_TryCarTask.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F6857441297B70DD0021D140 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +167,8 @@
 				F6AB9617297B3D4C00B7D49B /* TryCarTaskTests */,
 				F6AB9621297B3D4C00B7D49B /* TryCarTaskUITests */,
 				F6AB95FC297B3D4A00B7D49B /* Products */,
+				8AEC478D6FCB367B6640B53F /* Pods */,
+				C50D9B2FF6171C58605DB386 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,6 +228,7 @@
 			children = (
 				F6857442297B70EA0021D140 /* Data */,
 				F6857441297B70DD0021D140 /* Networking */,
+				F6A4F46F29A666720038300D /* MyCalendarController.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -219,6 +250,7 @@
 				F6AB9631297B3E7A00B7D49B /* FavListCV.swift */,
 				F6857449297B77DF0021D140 /* PostsListCV.swift */,
 				F6857465297BC56F0021D140 /* PostDetailsCV.swift */,
+				F6C8C1A329A60F8700A29B03 /* CalenderCV.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -238,6 +270,7 @@
 				F6AB960C297B3D4C00B7D49B /* LaunchScreen.storyboard */,
 				F6857453297BA5220021D140 /* Main.storyboard */,
 				F6AB960A297B3D4C00B7D49B /* Assets.xcassets */,
+				F6A4F47129A666F80038300D /* Extensions.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -249,9 +282,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6AB9628297B3D4C00B7D49B /* Build configuration list for PBXNativeTarget "TryCarTask" */;
 			buildPhases = (
+				C9945FE4DCE44FBCFD74230D /* [CP] Check Pods Manifest.lock */,
 				F6AB95F7297B3D4A00B7D49B /* Sources */,
 				F6AB95F8297B3D4A00B7D49B /* Frameworks */,
 				F6AB95F9297B3D4A00B7D49B /* Resources */,
+				6137D8650DA2701A81F422A9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -326,7 +361,7 @@
 				};
 			};
 			buildConfigurationList = F6AB95F6297B3D4A00B7D49B /* Build configuration list for PBXProject "TryCarTask" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -376,6 +411,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6137D8650DA2701A81F422A9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TryCarTask/Pods-TryCarTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TryCarTask/Pods-TryCarTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TryCarTask/Pods-TryCarTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9945FE4DCE44FBCFD74230D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TryCarTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F6AB95F7297B3D4A00B7D49B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -387,6 +464,9 @@
 				F6857439297B6FC70021D140 /* FavListViewModel.swift in Sources */,
 				F6857452297B984D0021D140 /* TabbarCV.swift in Sources */,
 				F6AB9636297B45C400B7D49B /* Comment.swift in Sources */,
+				F6C8C1A429A60F8700A29B03 /* CalenderCV.swift in Sources */,
+				F6A4F47229A666F80038300D /* Extensions.swift in Sources */,
+				F6A4F47029A666720038300D /* MyCalendarController.swift in Sources */,
 				F6AB963C297B496300B7D49B /* WebService.swift in Sources */,
 				F6AB95FF297B3D4A00B7D49B /* AppDelegate.swift in Sources */,
 				F6857466297BC56F0021D140 /* PostDetailsCV.swift in Sources */,
@@ -560,6 +640,7 @@
 		};
 		F6AB9629297B3D4C00B7D49B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E87C2EA55A5674B03F70D360 /* Pods-TryCarTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -592,6 +673,7 @@
 		};
 		F6AB962A297B3D4C00B7D49B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2131DFCFD7EE01FB5CF2B7E9 /* Pods-TryCarTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

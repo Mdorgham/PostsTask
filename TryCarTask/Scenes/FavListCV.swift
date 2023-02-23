@@ -24,14 +24,30 @@ struct FavListCV: View {
     var body: some View {
         NavigationView {
             VStack {
-                if let posts = favPosts {
+                if let posts = favPosts, (posts.count ?? 0) > 0{
                     ScrollView {
                         ForEach(posts , id: \.self) { post in
-                            VStack(alignment: .leading, spacing: 8) {
-                                PostCardView(title: post.title, type: post.body, isFavourite: true) {
-                                    favViewModel.removePostFromFav(postId: post.id, {
-                                        self.favPosts = favViewModel.favourites
-                                    })
+                            NavigationLink {
+                                
+                                PostDetailsCV(post: post,isFavourite: post.isFavourite ?? false) {
+                                    if (post.isFavourite ?? false) {
+                                        favViewModel.removePostFromFav(postId: post.id, {
+                                            self.favPosts = favViewModel.favourites
+                                        })
+                                    }else {
+                                        favViewModel.addPostToFav(postToAdd: post, {
+                                            self.favPosts = favViewModel.favourites
+                                            
+                                        })
+                                    }
+                                }
+                            } label: {
+                                VStack(alignment: .leading, spacing: 8) {
+                                    PostCardView(title: post.title, type: post.body, isFavourite: true) {
+                                        favViewModel.removePostFromFav(postId: post.id, {
+                                            self.favPosts = favViewModel.favourites
+                                        })
+                                    }
                                 }
                             }
                         }

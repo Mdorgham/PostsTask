@@ -19,6 +19,10 @@ struct TabbarCV: View {
                 .tabItem {
                     Label("Favourites", systemImage: "heart")
                 }
+            CalenderCV()
+                .tabItem {
+                    Label("Calendar", systemImage: "calendar")
+                }
                 
         }
     }

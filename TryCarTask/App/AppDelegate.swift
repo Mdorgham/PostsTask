@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import MOLH
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.black]
         UINavigationBar.appearance().backgroundColor = UIColor.white
         UINavigationBar.appearance().barTintColor = UIColor.white
-        
+        MOLH.shared.activate(false)
         return true
     }
 

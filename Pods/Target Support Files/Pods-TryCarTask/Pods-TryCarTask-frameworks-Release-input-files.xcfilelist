@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-TryCarTask/Pods-TryCarTask-frameworks.sh
+${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework
+${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework
+${BUILT_PRODUCTS_DIR}/MOLH/MOLH.framework

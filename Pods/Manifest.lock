@@ -1,0 +1,24 @@
+PODS:
+  - FSCalendar (2.8.4)
+  - JTAppleCalendar (7.1.8)
+  - MOLH (1.4.3)
+
+DEPENDENCIES:
+  - FSCalendar
+  - JTAppleCalendar (~> 7.1)
+  - MOLH
+
+SPEC REPOS:
+  trunk:
+    - FSCalendar
+    - JTAppleCalendar
+    - MOLH
+
+SPEC CHECKSUMS:
+  FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
+  JTAppleCalendar: b7fb40852f5f319fe55c8ec3861f1de0edc99cc8
+  MOLH: e45827d200aeb1310641090fd8cd03ad2b42ae72
+
+PODFILE CHECKSUM: b21dcf546b0f0bc34b1fbe8eed77012b27682de2
+
+COCOAPODS: 1.11.3
