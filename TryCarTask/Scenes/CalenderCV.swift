@@ -14,9 +14,12 @@ import JTAppleCalendar
 struct CalenderCV: View {
     
     @State var selectedDate: Date = Date()
+    @State var startDate = "From"
+    @State var endDate = "To"
+    @State var range = [""]
     
     var body: some View {
-        VStack {
+        VStack(spacing: 30) {
             HStack (alignment: .lastTextBaseline) {
                 Spacer()
                 Button {
@@ -33,8 +36,22 @@ struct CalenderCV: View {
                 }
                 .frame(width: 40,height: 40)
             }
-           
-            MyCalendar().frame(minWidth: 200, minHeight: 320).padding(.leading, 5)
+            
+           Text("\(startDate) - \(endDate)")
+            
+            MyCalendar(first: { firstDate in
+                
+                self.startDate = firstDate
+                
+            }, last: { lastData in
+                
+                self.endDate = lastData
+                
+            }, range: { range in
+                
+                self.range = range
+                
+            }).frame(minWidth: 200, minHeight: 320).padding(.leading, 5)
 
             Spacer()
         }
@@ -43,46 +60,14 @@ struct CalenderCV: View {
     }
 }
 
-//struct CalendarViewRepresentable: UIViewRepresentable {
-//
-//    typealias UIViewType = FSCalendar
-//    @Binding var selectedDate: Date
-//    fileprivate var calendar = FSCalendar()
-//    fileprivate var cal = Calendar(identifier: .gregorian)
-//    let locale = MOLHLanguage.currentAppleLanguage()
-//
-//    func makeUIView(context: Context) -> FSCalendar {
-//
-//        calendar.delegate = context.coordinator
-//        calendar.dataSource = context.coordinator
-//        calendar.firstWeekday = 1
-//        calendar.semanticContentAttribute = .forceRightToLeft
-//        calendar.locale = NSLocale(localeIdentifier: "ar-AE") as Locale
-//        calendar.allowsMultipleSelection = true
-//
-//
-//        return calendar
-//    }
-//
-//    func updateUIView(_ uiView: FSCalendar, context: Context) {}
-//
-//    func makeCoordinator() -> Coordinator {
-//        Coordinator(self)
-//    }
-//
-//    class Coordinator: NSObject,
-//                       FSCalendarDelegate, FSCalendarDataSource {
-//        var parent: CalendarViewRepresentable
-//
-//        init(_ parent: CalendarViewRepresentable) {
-//            self.parent = parent
-//        }
-//    }
-//}
-
 struct MyCalendar: UIViewControllerRepresentable {
+    
+    var first: (String) -> Void
+    var last: (String)-> Void
+    var range: ([String]) -> Void
+    
     func makeUIViewController(context: UIViewControllerRepresentableContext<MyCalendar>) -> MyCalendarController {
-        let calendar: MyCalendarController = .init()
+        let calendar = MyCalendarController(first: first,last: last,range: range)
         return calendar
     }
 

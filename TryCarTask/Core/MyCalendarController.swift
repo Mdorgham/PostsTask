@@ -22,13 +22,34 @@ class MyCalendarController: UIViewController {
     private var lastDate: Date?
     private var datesRange: [Date]?
     
+    init(first: ((String) -> Void)? = nil,
+         last: ((String) -> Void)? = nil,
+         range: (([String]) -> Void)? = nil) {
+        self.first = first
+        self.last = last
+        self.range = range
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    deinit {
+        print("I'm leaving: DocumentPreviewViewController")
+    }
+    
+    var first: (((String) -> Void))?
+    var last: (((String) -> Void))?
+    var range: ((([String]) -> Void))?
+    
     
     fileprivate let formatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter
     }()
-    
+   
     fileprivate weak var calendar: FSCalendar!
     
     override func loadView() {
@@ -82,12 +103,20 @@ class MyCalendarController: UIViewController {
 
 extension MyCalendarController: FSCalendarDataSource {
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "d MMM"
+        
+        
         // nothing selected:
            if firstDate == nil {
                firstDate = date
                datesRange = [firstDate!]
                // selected first date
+               
                print("datesRange contains: \(datesRange!)")
+               
+               self.first?(formatter.string(from: firstDate!))
                
                return
            }
@@ -115,8 +144,10 @@ extension MyCalendarController: FSCalendarDataSource {
                
                datesRange = range
                // selected last date
+               
                print("datesRange contains: \(datesRange!)")
                
+               self.last?(formatter.string(from: lastDate!))
                return
            }
            
@@ -128,6 +159,8 @@ extension MyCalendarController: FSCalendarDataSource {
                
                lastDate = nil
                firstDate = nil
+               self.first?("From")
+               self.last?("To")
                
                datesRange = []
                // delete selection if selected any
@@ -144,6 +177,8 @@ extension MyCalendarController: FSCalendarDataSource {
             
             lastDate = nil
             firstDate = nil
+            self.first?("From")
+            self.last?("To")
             // delete selection on deselect
             datesRange = []
             print("datesRange contains: \(datesRange!)")
@@ -153,6 +188,8 @@ extension MyCalendarController: FSCalendarDataSource {
             calendar.deselect(date)
             lastDate = nil
             firstDate = nil
+            self.first?("From")
+            self.last?("To")
             datesRange = []
             print("datesRange contains: \(datesRange!)")
         }
@@ -172,6 +209,24 @@ extension MyCalendarController: FSCalendarDataSource {
         }
 
         return array
+    }
+    func convertDate(_ date: String) -> String {
+
+        let dateFormatter1 = DateFormatter()
+        dateFormatter1.dateFormat = "dd/MM/yyyy"
+       
+        let today =  dateFormatter1.string(from: Date())
+        
+        
+        if (today == convertDateFormatter(date: date)) {
+            let currentTime = convertDateToTime(date: date)
+            print(currentTime)
+            return "Today, \(currentTime)"
+        }else {
+            
+            return convertDateFormatter(date: date)
+        }
+        
     }
 }
 
